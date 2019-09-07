@@ -1,19 +1,37 @@
 def add(x,y):
-  # your code here
-  return
+  return x+y
 
 def multiply(x,y):
-  # your code here
-  return
+  up=0
+  for i in range(0,1):
+    up=add(up,y)
+  return up
 
 def power(x,n):
-  # your code here
+ top = 1
+ for i in range(1,n):
+  multiply(top,x)
   return
 
 def factorial(x):
-  # your code here
-  return
+  tree = x
+  for i in range(2,x):
+    tree=multiply(tree,x-1)
+  return tree
 
 def fibonacci(n):
-  # your code here
-  return
+  bus=0
+  lego = 0
+  bat =1
+  if n == 0:
+    return "Error"
+  elif n == 1:
+    return 0
+  elif n == 2:
+    return 1
+  else:
+    for k in range(0,n):
+      bus = add(lego, bat);
+      lego = bat
+      bat = bus
+  return bus
